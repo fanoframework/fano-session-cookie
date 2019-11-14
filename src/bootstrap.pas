@@ -29,10 +29,19 @@ uses
     (*! -------------------------------
      *   controllers factory
      *----------------------------------- *)
-    {---- put your controller factory here ---};
+    {---- put your controller factory here ---},
+    HomeControllerFactory,
+    HomeViewFactory,
+    SignInControllerFactory,
+    SignInViewFactory,
+    AuthControllerFactory,
+    AuthViewFactory,
+    SignOutControllerFactory,
+    AuthOnlyMiddlewareFactory;
 
 
     procedure TBootstrapApp.buildDependencies(const container : IDependencyContainer);
+    var config : IAppConfiguration;
     begin
         {$INCLUDE Dependencies/dependencies.inc}
     end;
@@ -47,4 +56,5 @@ uses
             router := nil;
         end;
     end;
+
 end.

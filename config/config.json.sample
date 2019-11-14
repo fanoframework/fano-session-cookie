@@ -1,0 +1,18 @@
+{
+    "appName" : "MyApp",
+
+    "baseUrl" : "http://fano-session-cookie.fano",
+
+    "secretKey" : "hush hush secret key you should replace for example with fanocli --key",
+
+    "session" : {
+        "name" : "fano_sess",
+        "dir" : "storages/sessions/"
+    },
+
+    "cookie" : {
+        "name" : "fano_sess",
+        "domain" : "fano-session.fano",
+        "maxAge" : 3600
+    }
+}
