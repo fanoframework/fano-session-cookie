@@ -40,7 +40,7 @@ container.add(
     GuidToString(IDispatcher),
     TSessionDispatcherFactory.create(
         container['appMiddlewares'] as IMiddlewareLinkList,
-        container[GuidToString(IRouteMatcher)] as IRouteMatcher,
+        getRouteMatcher(),
         TRequestResponseFactory.create(),
         container['sessionManager'] as ISessionManager,
         (TCookieFactory.create()).domain(config.getString('cookie.domain')),
